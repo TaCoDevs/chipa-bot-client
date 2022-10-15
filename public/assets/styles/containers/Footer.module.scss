@@ -1,0 +1,78 @@
+@import "../vars.module.scss";
+
+.footer {
+  background-color: $white-theme-color-secondary;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.devs {
+  text-decoration: underline;
+  color: blue;
+}
+
+.github,
+.discord {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.contact_img {
+  margin: auto 10px;
+}
+
+@media screen and (min-width: 320px) {
+  .footer {
+    font-size: $mobile-font-text-size;
+  }
+
+  .discord {
+    width: 25px;
+    margin: 0px 2px;
+  }
+
+  .github {
+    width: 20px;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .footer {
+    font-size: $tablet-font-text-size;
+  }
+
+  .discord {
+    width: 30px;
+  }
+
+  .github {
+    width: 25px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer {
+    font-size: $desktop-font-text-size;
+  }
+
+  .discord {
+    width: 40px;
+  }
+
+  .github {
+    width: 35px;
+  }
+}

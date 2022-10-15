@@ -1,0 +1,106 @@
+@import "../../vars.module.scss";
+
+.slogan {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+
+  .logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    transform: rotate(10deg);
+  }
+
+  .info {
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
+    justify-self: center;
+
+    .title {
+      font-family: $titles-font;
+    }
+
+    .text {
+      font-family: $text-font;
+      position: absolute;
+    }
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+.add {
+  background-color: $theme-color-alternative;
+  color: $white-theme-color-main;
+
+  .add_container {
+    text-align: center;
+    padding: 15px;
+
+    .title {
+      font-family: $titles-font;
+      margin: 5px;
+
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile-size) {
+  .slogan {
+    .logo {
+      width: $mobile-image-size;
+    }
+
+    .info {
+      .title {
+        font-size: $mobile-font-title-size;
+      }
+
+      .text {
+        font-size: $mobile-font-text-size;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-size) {
+  .slogan {
+    .logo {
+      width: $tablet-image-size;
+    }
+
+    .info {
+      .title {
+        font-size: $tablet-font-title-size;
+      }
+
+      .text {
+        font-size: $tablet-font-text-size;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-size) {
+  .slogan {
+    .logo {
+      width: $desktop-image-size;
+    }
+
+    .info {
+      .title {
+        font-size: $desktop-font-title-size;
+      }
+
+      .text {
+        font-size: $desktop-font-text-size;
+      }
+    }
+  }
+}

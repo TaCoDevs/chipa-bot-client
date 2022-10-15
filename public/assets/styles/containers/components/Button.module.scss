@@ -1,0 +1,52 @@
+@import "../../vars.module.scss";
+
+.button {
+  display: inline;
+  font-family: $text-font;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin: auto 5px;
+
+  &.white {
+    background-color: $white-theme-button-color-main;
+  }
+
+  &.dark {
+    background-color: $black-theme-button-color-main;
+  }
+
+  &.link {
+    a {
+      text-decoration: none;
+    }
+
+    &.white {
+      a {
+        color: $white-theme-button-color-text;
+      }
+
+      &:hover {
+        background-color: $white-theme-button-color-hover;
+        cursor: pointer;
+      }
+    }
+
+    &.dark {
+      a {
+        color: $white-theme-button-color-text;
+      }
+
+      &:hover {
+        background-color: $white-theme-button-color-hover;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.action {
+    &.white {
+    }
+    &.dark {
+    }
+  }
+}
