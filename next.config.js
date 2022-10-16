@@ -10,6 +10,10 @@ const config = {
             destination: "/",
             permanent: false
         }]
+    },
+
+    images: {
+        domains: ["i.ytimg.com"]
     }
 }
 

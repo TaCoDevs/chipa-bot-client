@@ -10,6 +10,8 @@ import Logo from "../../public/assets/images/chipa-bot.png";
 import styles from "../../public/assets/styles/pages/modules/landing.module.scss";
 import Button from "../../src/common/containers/components/Button";
 
+import Searching from "./Searching";
+
 const Add = () => {
   return (
     <section className={styles.add}>
@@ -76,6 +78,7 @@ const Landing = () => {
         <title>Chipa-bot</title>
       </Head>
       <Header />
+      <Searching />
       <Footer />
     </>
   );
