@@ -1,26 +1,25 @@
 import { useState } from "react";
 import Image from "next/image";
 
+import styles from "../../../../public/assets/styles/containers/components/SongItem.module.scss";
+
 const SongItem = ({ data }) => {
-    console.log(data)
-    const [isPlaying, setIsPlaying] = useState(false)
+  console.log(data);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-    return (
-        <div id={data.videoId}>
-            <div>
-                <Image src={data.image} width={120} height={120}/>
-            </div>
-            <div>
-                <h3>{data.title}</h3>
-                <span>{data.author.name}</span>
-                <p>{data.timestamp}</p>
-            </div>
-            <div>
-                <button>play</button>
-                <button>Add to playlist</button>
-            </div>
+  return (
+    <div className={styles.item} id={data.videoId}>
+      <div className={styles.content}>
+        <div>
+          <Image src={data.image} width={80} height={60} />
         </div>
-    )
-}
+        <div>
+          <h3 className={styles.title}>{data.title}</h3>
+          <span className={styles.text}>{data.author.name}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default SongItem
+export default SongItem;

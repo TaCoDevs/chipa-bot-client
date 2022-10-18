@@ -1,0 +1,14 @@
+@import "../../vars.module.scss";
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-family: $titles-font;
+}
+
+.text {
+  font-family: $text-font;
+}
