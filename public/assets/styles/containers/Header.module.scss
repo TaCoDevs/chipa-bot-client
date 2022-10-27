@@ -15,14 +15,12 @@
     align-items: center;
     text-decoration: none;
 
-    .logo_image {
-      width: 80px;
-    }
-
     .logo_text {
       color: $white-theme-color-titles;
       font-family: $titles-font;
     }
+
+    img { width: 80px; height: 80px; }
   }
 }
 
@@ -43,6 +41,10 @@
     margin: 6px 0;
     transition: 0.4s;
   }
+
+  .mobile_menu {
+    display: none;
+  }
 }
 
 .open {
@@ -59,10 +61,23 @@
     -webkit-transform: rotate(45deg) translate(-6px, -8px);
     transform: rotate(45deg) translate(-6px, -8px);
   }
+
+  .mobile_menu {
+    display: block;
+    position: absolute;
+    top: 10%;
+    width: 200px;
+    background-color: aqua;
+
+    a {
+      display: block;
+    }
+  }
 }
 
 @media screen and (min-width: 320px) {
-  .logo_text, .nav {
+  .logo_text,
+  .nav {
     display: none;
   }
 }

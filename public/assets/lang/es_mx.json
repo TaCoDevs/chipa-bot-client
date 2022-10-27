@@ -1,0 +1,39 @@
+{
+    "header": {
+        "commads": "Comandos",
+        "music": "Música",
+        "console": "Consola",
+        "options": "Opciones",
+        "login": "Iniciar sesión"
+    },
+    "landing": {
+        "title": "Chipa-bot",
+        "slogan": "La grandeza a tus pies",
+        "news": {
+            "music": {
+                "title": "Musica",
+                "text": "Un reproductor de música y un motor de busqueda de Youtube, Spotify y SoundCloud"
+            },
+            "news": {
+                "title": "",
+                "text": ""
+            },
+            "add": {
+                "title": "",
+                "text": ""
+            }
+        },
+        "add": {
+            "title": "Una nueva forma de moderar",
+            "text": "Iniciar sesión"
+        }
+    },
+    "commands": {
+        "title": "Chipa-bot | Comandos"
+    },
+    "footer": {
+        "about": "Acerca de",
+        "devs": "Desarrolladores",
+        "contact": "Contacto"
+    }
+}

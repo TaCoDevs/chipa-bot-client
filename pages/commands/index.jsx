@@ -1,7 +1,15 @@
 import React from "react";
+import Head from "next/head";
 
-const Commands = () => {
-    return <div>caca</div>
+const App = () => {
+    return (
+        <>
+        <Head>
+            <title>Chipa-bot | Comandos</title>
+        </Head>
+        <div className="app"></div>
+        </>
+    )
 }
 
-export default Commands
+export default App

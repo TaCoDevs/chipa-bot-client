@@ -44,7 +44,7 @@ const Searching = () => {
       <div className={styles.searcher_container}>
         <div className={styles.searcher}>
           <div className={styles.search_button} onClick={fetchData}>
-            <Image src={btnSearch} />
+            <Image src={btnSearch} alt=".search-icon"/>
           </div>
           <input
             className={styles.input}

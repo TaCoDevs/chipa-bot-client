@@ -39,8 +39,8 @@ const LinkButton = (props) => {
   if (theme === "white") {
     return (
       <div className={`${styles.button} ${styles.link} ${styles.white}`}>
-        <Link href={href}>
-          <a>{text}</a>
+        <Link href={href} legacyBehavior>
+          {text}
         </Link>
       </div>
     );
@@ -49,8 +49,8 @@ const LinkButton = (props) => {
   if (theme === "dark") {
     return (
       <div className={`${styles.button} ${styles.link} ${styles.dark}`}>
-        <Link href={href}>
-          <a>{text}</a>
+        <Link href={href} legacyBehavior>
+          {text}
         </Link>
       </div>
     );
@@ -75,7 +75,7 @@ Button.propTypes = {
   text: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
   href: PropTypes.string,
-  onClick: PropTypes.func
-}
+  onClick: PropTypes.func,
+};
 
 export default Button;

@@ -14,8 +14,8 @@ const Footer = () => {
         <p>Acerca de</p>
         <hr />
         <div className={styles.devs}>
-          <Link href="/devs">
-            <a className={styles.devs}>desarrolladores</a>
+          <Link href="/devs" className={styles.devs}>
+            desarrolladores
           </Link>
         </div>
       </div>
@@ -24,17 +24,13 @@ const Footer = () => {
         <hr />
         <div className={styles.media}>
           <div className={`${styles.contact_img} ${styles.discord}`}>
-            <Link href="https://discord.gg/xXN7nyp8kC">
-              <a>
-                <Image src={discord_dark} />
-              </a>
+            <Link href="https://discord.gg/xXN7nyp8kC" legacyBehavior>
+              <Image src={discord_dark} alt=".discord_dark"/>
             </Link>
           </div>
           <div className={`${styles.contact_img} ${styles.github}`}>
-            <Link href="https://github.com/TaCoDevs/chipa-bot">
-              <a>
-                <Image src={github_dark} />
-              </a>
+            <Link href="https://github.com/TaCoDevs/chipa-bot" legacyBehavior>
+              <Image src={github_dark} alt=".git_dark"/>
             </Link>
           </div>
         </div>

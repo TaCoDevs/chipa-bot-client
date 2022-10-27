@@ -7,7 +7,6 @@
   padding: 15px;
   text-align: center;
   align-items: center;
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
@@ -39,13 +38,15 @@
     font-size: $mobile-font-text-size;
   }
 
-  .discord {
+  .discord img {
     width: 25px;
     margin: 0px 2px;
+    height: auto;
   }
 
-  .github {
+  .github img {
     width: 20px;
+    height: auto;
   }
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,23 +17,22 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href={"/"} className="logo-link">
-          <a>
-            <div className={styles.logo_image}>
-              <Image src={src} />
-            </div>
-            <div className={styles.logo_text}>Chipa-bot</div>
-          </a>
-        </Link>
+        <a href="/">
+          <div className={styles.logo_image}>
+            <Image src={src} alt=".chipa-bot logo" />
+          </div>
+          <div className={styles.logo_text}>Chipa-bot</div>
+        </a>
       </div>
       <div className={styles.nav}>
-        <Button theme="white" href={"/commands"} text="Commands" />
-        <Button theme="white" href={"/player"} text="Music" />
-        <Button theme="white" href={"/console"} text="Console" />
+        <Button theme="white" href={"/commands"} text="Comandos" />
+        <Button theme="white" href={"/player"} text="Reproductor" />
+        <Button theme="white" href={"/console"} text="Consola" />
+        <Button theme="white" href={"/options"} text="Opciones" />
         <Button
           theme="white"
           href={"http://26.89.117.213:4000/login"}
-          text="Login"
+          text="Iniciar sesión"
         />
       </div>
       <div id="menu" className={styles.hamburger}>
@@ -41,10 +41,19 @@ const Header = () => {
           <div className={`${styles.bar} ${styles.bar2}`}></div>
           <div className={`${styles.bar} ${styles.bar3}`}></div>
         </div>
-        <ul>{/* Menu */}</ul>
+        <ul className={styles.mobile_menu}>
+          <div>logo</div>
+          <Link href={"/commands"}>Comandos</Link>
+          <Link href={"/player"}>Reproductor</Link>
+          <Link href={"/console"}>Consola</Link>
+          <Link href={"/options"}>Opciones</Link>
+          <Link href={"http://26.89.117.213:4000/login"}>Iniciar sesión</Link>
+        </ul>
       </div>
     </header>
   );
 };
+
+// 140456957607
 
 export default Header;

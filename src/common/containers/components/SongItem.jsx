@@ -11,7 +11,7 @@ const SongItem = ({ data }) => {
     <div className={styles.item} id={data.videoId}>
       <div className={styles.content}>
         <div>
-          <Image src={data.image} width={80} height={60} />
+          <Image src={data.image} width={80} height={60} alt=".thumb"/>
         </div>
         <div>
           <h3 className={styles.title}>{data.title}</h3>

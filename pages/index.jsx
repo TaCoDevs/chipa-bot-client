@@ -16,7 +16,7 @@ const App = () => {
       <div className="app">
         <section className={styles.slogan}>
           <div className={styles.logo}>
-            <Image src={Logo} />
+            <Image src={Logo} alt=".logo"/>
           </div>
           <div className={styles.info}>
             <h2 className={styles.title}>Chipa-bot</h2>
