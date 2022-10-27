@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SongItem from "../../src/common/containers/components/SongItem";
-import styles from "../../public/assets/styles/pages/player/index.module.scss";
+import styles from "./styles/index.module.scss";
 import Image from "next/image";
 
 import btnSearch from "../../public/assets/images/icons/search-icon.png";

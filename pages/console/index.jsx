@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-import styles from "../../public/assets/styles/pages/console/index.module.scss";
+import styles from "./styles/index.module.scss";
 
 const App = () => {
   return (
