@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import styles from "../../../../public/assets/styles/containers/components/SongItem.module.scss";
+import styles from "../../../../public/styles/containers/components/SongItem.module.scss";
 
 const SongItem = ({ data }) => {
   console.log(data);

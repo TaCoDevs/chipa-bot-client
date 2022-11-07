@@ -1,0 +1,29 @@
+@import "../../vars.module.scss";
+
+.ChipaLink {
+    text-decoration: none;
+    display: inline-block;
+    margin: auto 5px;
+    font-family: $text-font;
+
+    &::after {
+        content: "";
+        width: 0px;
+        height: 1px;
+        display: block;
+        background: $theme-color-alternative;
+        transition: 300ms;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.white {
+    color: $white-theme-color-text;
+}
+
+.dark {
+    color: $black-theme-color-text;
+}

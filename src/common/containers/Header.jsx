@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "./components/Button";
+import ChipaButton from "./components/Button";
+import ChipaLink from "./components/Link";
 
-import styles from "../../../public/assets/styles/containers/Header.module.scss";
+import styles from "../../../public/styles/containers/Header.module.scss";
 import src from "../../../public/assets/images/chipa-bot.png";
 
 function toggle() {
@@ -17,23 +17,21 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <a href="/">
+        <Link href={"/"}>
           <div className={styles.logo_image}>
-            <Image src={src} alt=".chipa-bot logo" />
+            <Image src={src} alt=".chipa-bot logo" priority />
           </div>
           <div className={styles.logo_text}>Chipa-bot</div>
-        </a>
+        </Link>
       </div>
       <div className={styles.nav}>
-        <Button theme="white" href={"/commands"} text="Comandos" />
-        <Button theme="white" href={"/player"} text="Reproductor" />
-        <Button theme="white" href={"/console"} text="Consola" />
-        <Button theme="white" href={"/options"} text="Opciones" />
-        <Button
-          theme="white"
-          href={"http://26.89.117.213:4000/login"}
-          text="Iniciar sesión"
-        />
+        <ChipaLink href="/commands">Comandos</ChipaLink>
+        <ChipaLink href="/player">Reproductor</ChipaLink>
+        <ChipaLink href="/console">Consola</ChipaLink>
+        <ChipaLink href="/options">Opciones</ChipaLink>
+        <ChipaButton>
+          <Link href="http://26.89.117.213:4000/login">Login</Link>
+        </ChipaButton>
       </div>
       <div id="menu" className={styles.hamburger}>
         <div className={styles.bars} onClick={toggle}>
@@ -43,17 +41,15 @@ const Header = () => {
         </div>
         <ul className={styles.mobile_menu}>
           <div>logo</div>
-          <Link href={"/commands"}>Comandos</Link>
-          <Link href={"/player"}>Reproductor</Link>
-          <Link href={"/console"}>Consola</Link>
-          <Link href={"/options"}>Opciones</Link>
-          <Link href={"http://26.89.117.213:4000/login"}>Iniciar sesión</Link>
+          <ChipaLink href="/commands">Comandos</ChipaLink>
+          <ChipaLink href="/player">Reproductor</ChipaLink>
+          <ChipaLink href="/console">Consola</ChipaLink>
+          <ChipaLink href="/options">Opciones</ChipaLink>
+          <ChipaLink href="http://26.89.117.213:4000/login">Login</ChipaLink>
         </ul>
       </div>
     </header>
   );
 };
-
-// 140456957607
 
 export default Header;

@@ -1,81 +1,23 @@
 import React from "react";
-import Link from "next/link";
-
 import PropTypes from "prop-types";
 
-import styles from "../../../../public/assets/styles/containers/components/Button.module.scss";
+import styles from "../../../../public/styles/containers/components/Button.module.scss";
 
-const ActionButton = (props) => {
-  const { text, theme, onclick } = props;
+const fakeContext = {
+  lang: "es",
+  theme: "white"
+}
 
-  if (theme === "white") {
-    return (
-      <div
-        className={`${styles.button} ${styles.action} ${styles.white}`}
-        onClick={onclick}
-      >
-        {text}
-      </div>
-    );
-  }
+const ChipaButton = (props) => {
+  const { children, href } = props
+  const { theme } = fakeContext
 
-  if (theme === "dark") {
-    return (
-      <div
-        className={`${styles.button} ${styles.action} ${styles.dark}`}
-        onClick={onclick}
-      >
-        {text}
-      </div>
-    );
-  }
+  if (theme == "white") return <button className={`${styles.button} ${styles.white}`}>{children}</button>
+  else return <button className={`${styles.button} ${styles.dark}`}>{children}</button>
+}
 
-  throw new Error("Theme not valid");
-};
+ChipaButton.propTypes = {
+  href: PropTypes.string
+}
 
-const LinkButton = (props) => {
-  const { text, theme, href } = props;
-
-  if (theme === "white") {
-    return (
-      <div className={`${styles.button} ${styles.link} ${styles.white}`}>
-        <Link href={href} legacyBehavior>
-          {text}
-        </Link>
-      </div>
-    );
-  }
-
-  if (theme === "dark") {
-    return (
-      <div className={`${styles.button} ${styles.link} ${styles.dark}`}>
-        <Link href={href} legacyBehavior>
-          {text}
-        </Link>
-      </div>
-    );
-  }
-
-  throw new Error("Theme not valid");
-};
-
-const Button = ({ text, theme, href, onClick }) => {
-  if (onClick) {
-    return ActionButton({ text, theme, onClick });
-  }
-
-  if (href) {
-    return LinkButton({ text, theme, href });
-  }
-
-  throw new Error("Bad Button implementation");
-};
-
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  theme: PropTypes.string.isRequired,
-  href: PropTypes.string,
-  onClick: PropTypes.func,
-};
-
-export default Button;
+export default ChipaButton;
