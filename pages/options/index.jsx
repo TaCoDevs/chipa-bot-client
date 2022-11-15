@@ -16,6 +16,15 @@ const App = () => {
     setState(config);
   }
 
+  useEffect(() => {
+    const theme = document.getElementById("theme")
+    theme.addEventListener("click", () => {
+      let isChecked = theme.checked
+      
+      setState({ ...state, isBlackTheme: isChecked })
+    })
+  })
+
   return (
     <>
       <Head>
@@ -35,8 +44,8 @@ const App = () => {
         <div>
           <span>language</span>
           <select name="lang" id="lang">
-            <option value="en">En/Us</option>
-            <option value="es">Es/Mx</option>
+            <option value="en_us">En/Us</option>
+            <option value="es_mx">Es/Mx</option>
           </select>
         </div>
         <div>

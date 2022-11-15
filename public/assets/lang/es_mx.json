@@ -11,8 +11,8 @@
         "slogan": "La grandeza a tus pies",
         "news": {
             "music": {
-                "title": "Musica",
-                "text": "Un reproductor de música y un motor de busqueda de Youtube, Spotify y SoundCloud"
+                "title": "Música",
+                "text": "Un reproductor de música y un motor de búsqueda de YouTube, Spotify y SoundCloud"
             },
             "news": {
                 "title": "",
@@ -33,7 +33,7 @@
     },
     "footer": {
         "about": "Acerca de",
-        "devs": "Desarrolladores",
+        "devops": "Desarrolladores",
         "contact": "Contacto"
     }
 }

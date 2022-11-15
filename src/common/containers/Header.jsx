@@ -19,8 +19,9 @@ const Header = () => {
   const { isBlackTheme, lang } = state
 
   let theme = "white"
-
   if (isBlackTheme) theme = "black"
+
+  const { header } = require(`../../../public/assets/lang/${lang}.json`)
 
   return (
     <header className={`${theme} ${styles.header}`}>
@@ -33,12 +34,12 @@ const Header = () => {
         </Link>
       </div>
       <div className={`text ${styles.nav}`}>
-        <ChipaLink href="/commands">Comandos</ChipaLink>
-        <ChipaLink href="/player">Reproductor</ChipaLink>
-        <ChipaLink href="/console">Consola</ChipaLink>
-        <ChipaLink href="/options">Opciones</ChipaLink>
+        <ChipaLink href="/commands">{ header.commands }</ChipaLink>
+        <ChipaLink href="/player">{ header.music }</ChipaLink>
+        <ChipaLink href="/console">{ header.console }</ChipaLink>
+        <ChipaLink href="/options">{ header.options }</ChipaLink>
         <ChipaButton>
-          <Link href="http://26.89.117.213:4000/login">Login</Link>
+          <Link href="http://26.89.117.213:4000/login">{ header.login }</Link>
         </ChipaButton>
       </div>
       <div id="menu" className={styles.hamburger}>
@@ -49,11 +50,11 @@ const Header = () => {
         </div>
         <ul className={styles.mobile_menu}>
           <div>logo</div>
-          <ChipaLink href="/commands">Comandos</ChipaLink>
-          <ChipaLink href="/player">Reproductor</ChipaLink>
-          <ChipaLink href="/console">Consola</ChipaLink>
-          <ChipaLink href="/options">Opciones</ChipaLink>
-          <ChipaLink href="http://26.89.117.213:4000/login">Login</ChipaLink>
+          <ChipaLink href="/commands">{ header.commands }</ChipaLink>
+          <ChipaLink href="/player">{ header.music }</ChipaLink>
+          <ChipaLink href="/console">{ header.console }</ChipaLink>
+          <ChipaLink href="/options">{ header.options }</ChipaLink>
+          <ChipaLink href="http://26.89.117.213:4000/login">{ header.login }</ChipaLink>
         </ul>
       </div>
     </header>

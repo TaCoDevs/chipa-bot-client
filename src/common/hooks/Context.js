@@ -2,7 +2,7 @@ import React, { useContext, createContext } from "react";
 
 export const AppContext = createContext(null)
 
-export const defaultConfig = { isBlackTheme: false, lang: "en" }
+export const defaultConfig = { isBlackTheme: false, lang: "en_us" }
 
 export const AppContextProvider = ({ children }) => {
     const [state, setState] = React.useState(defaultConfig)
