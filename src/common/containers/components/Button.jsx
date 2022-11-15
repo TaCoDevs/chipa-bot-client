@@ -3,17 +3,10 @@ import PropTypes from "prop-types";
 
 import styles from "../../../../public/styles/containers/components/Button.module.scss";
 
-const fakeContext = {
-  lang: "es",
-  theme: "white"
-}
-
 const ChipaButton = (props) => {
-  const { children, href } = props
-  const { theme } = fakeContext
+  const { children, href, isDark } = props
 
-  if (theme == "white") return <button className={`${styles.button} ${styles.white}`}>{children}</button>
-  else return <button className={`${styles.button} ${styles.dark}`}>{children}</button>
+  return isDark ? <button className={`${styles.button} ${styles.dark}`}>{children}</button> : <button className={`${styles.button} ${styles.white}`}>{children}</button>
 }
 
 ChipaButton.propTypes = {

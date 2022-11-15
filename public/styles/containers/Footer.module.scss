@@ -1,7 +1,6 @@
 @import "../vars.module.scss";
 
 .footer {
-  background-color: $white-theme-color-secondary;
   display: flex;
   justify-content: space-between;
   padding: 15px;
@@ -17,9 +16,8 @@
   align-items: center;
 }
 
-.devs {
+.devops {
   text-decoration: underline;
-  color: blue;
 }
 
 .github,
