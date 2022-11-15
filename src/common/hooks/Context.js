@@ -2,13 +2,22 @@ import React, { useContext, createContext } from "react";
 
 export const AppContext = createContext(null)
 
-export const AppContextProvider = ({ children }) => {
-    const [variableState, setVariableState] = React.useState(false)
+export const defaultConfig = { isBlackTheme: false, lang: "en" }
 
-    React.useEffect(() => { }, [])
+export const AppContextProvider = ({ children }) => {
+    const [state, setState] = React.useState(defaultConfig)
+
+    React.useEffect(() => {
+        localStorage.setItem("defaultConfig", JSON.stringify(defaultConfig))
+        const customConfig = JSON.parse(localStorage.getItem("customConfig"))
+
+        if (customConfig) {
+            setState(customConfig)
+        }
+    }, [])
 
     const values = React.useMemo(() => (
-        { variableState, setVariableState }), [variableState])
+        { state, setState }), [state])
 
     return <AppContext.Provider value={values}>{children}</AppContext.Provider>
 }

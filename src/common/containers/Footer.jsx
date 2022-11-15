@@ -13,8 +13,8 @@ const Footer = () => {
       <div className={styles.about}>
         <p>Acerca de</p>
         <hr />
-        <div className={styles.devs}>
-          <Link href="/devs" className={styles.devs}>
+        <div className={styles.devops}>
+          <Link href="/devops" className={styles.devops}>
             desarrolladores
           </Link>
         </div>

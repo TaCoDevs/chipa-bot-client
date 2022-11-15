@@ -255,5 +255,6 @@ $RECYCLE.BIN/
 *.lnk
 
 pages/dev
+.vscode
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs,react,windows,linux,macos,node

@@ -7,6 +7,7 @@ import ChipaLink from "./components/Link";
 
 import styles from "../../../public/styles/containers/Header.module.scss";
 import src from "../../../public/assets/images/chipa-bot.png";
+import { useAppContext } from "../hooks/Context";
 
 function toggle() {
   const menu = document.getElementById("menu");
@@ -14,17 +15,24 @@ function toggle() {
 }
 
 const Header = () => {
+  const { state, setState } = useAppContext()
+  const { isBlackTheme, lang } = state
+
+  let theme = "white"
+
+  if (isBlackTheme) theme = "black"
+
   return (
-    <header className={styles.header}>
+    <header className={`${theme} ${styles.header}`}>
       <div className={styles.logo}>
         <Link href={"/"}>
           <div className={styles.logo_image}>
             <Image src={src} alt=".chipa-bot logo" priority />
           </div>
-          <div className={styles.logo_text}>Chipa-bot</div>
+          <div className={`title ${styles.logo_text}`}>Chipa-bot</div>
         </Link>
       </div>
-      <div className={styles.nav}>
+      <div className={`text ${styles.nav}`}>
         <ChipaLink href="/commands">Comandos</ChipaLink>
         <ChipaLink href="/player">Reproductor</ChipaLink>
         <ChipaLink href="/console">Consola</ChipaLink>

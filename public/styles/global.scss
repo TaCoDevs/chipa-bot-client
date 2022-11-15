@@ -1,3 +1,5 @@
+@import "./vars.module.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -13,5 +15,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+}
+
+.white {
+  background-color: $white-theme-color-secondary;
+
+  .text {
+    color: $white-theme-color-text;
+    font-family: $text-font;
+  }
+
+  .title {
+    font-family: $titles-font;
+    color: $white-theme-color-titles;
+  }
+
+  .btn {
+    background-color: $white-theme-button-color-main;
+    color: $white-theme-button-color-text;
+
+    &:hover {
+      background-color: $white-theme-button-color-hover;
+    }
+  }
+}
+
+.black {
+  background-color: $black-theme-color-secondary;
+
+  .text {
+    color: $black-theme-color-text;
+    font-family: $text-font;
+  }
+
+  .title {
+    font-family: $titles-font;
+    color: $black-theme-color-titles;
+  }
+
+  .btn {
+    background-color: $black-theme-button-color-main;
+    color: $black-theme-button-color-text;
+
+    &:hover {
+      background-color: $black-theme-button-color-hover;
+    }
   }
 }

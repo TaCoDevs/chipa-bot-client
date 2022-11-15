@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import Search from "./modules/Search";
 import styles from "./styles/index.module.scss";
@@ -8,6 +9,9 @@ import styles from "./styles/index.module.scss";
 const App = () => {
   return (
     <div>
+      <Head>
+        <title>Chipa-bot | Reproductor</title>
+      </Head>
       <Search />
     </div>
   )

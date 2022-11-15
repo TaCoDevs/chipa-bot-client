@@ -1,30 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
-
-function saveConfig() {
-  const theme = document.getElementById("theme").checked
-  const lang = document.getElementById("lang")
-
-  console.log(theme, lang)
-}
+import useAppContext from "../../src/common/hooks/Context";
 
 const App = () => {
+  const { state, setState } = useAppContext();
+  const { isBlackTheme, lang } = state;
+
+  function saveConfig() {
+    const lang = document.getElementById("lang").value;
+    const theme = document.getElementById("theme").checked;
+
+    const config = { isBlackTheme: theme, lang };
+
+    localStorage.setItem("customConfig", JSON.stringify(config));
+    setState(config);
+  }
+
   return (
     <>
-    <Head>
-      <title>Chipa-bot | Options</title>
-    </Head>
+      <Head>
+        <title>Chipa-bot | Options</title>
+      </Head>
       <div className="app">
         <h3>Web Options</h3>
         <div>
           <span>Theme</span>
-          <input type="checkbox" name="theme" value={false} id="theme" />
+          <input
+            type="checkbox"
+            name="theme"
+            defaultChecked={isBlackTheme}
+            id="theme"
+          />
         </div>
         <div>
           <span>language</span>
           <select name="lang" id="lang">
-            <option value="">En/Us</option>
-            <option value="">Es/Mx</option>
+            <option value="en">En/Us</option>
+            <option value="es">Es/Mx</option>
           </select>
         </div>
         <div>
