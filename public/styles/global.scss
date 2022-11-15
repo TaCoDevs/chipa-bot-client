@@ -21,6 +21,10 @@
 .white {
   background-color: $white-theme-color-secondary;
 
+  &.app {
+    background-color: $white-theme-color-main;
+  }
+
   .text {
     color: $white-theme-color-text;
     font-family: $text-font;
@@ -44,6 +48,10 @@
 .black {
   background-color: $black-theme-color-secondary;
 
+  &.app {
+    background-color: $black-theme-color-main;
+  }
+
   .text {
     color: $black-theme-color-text;
     font-family: $text-font;
@@ -63,3 +71,4 @@
     }
   }
 }
+

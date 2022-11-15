@@ -9,7 +9,7 @@ const App = () => {
         <Head>
             <title>Chipa-bot | Comandos</title>
         </Head>
-        <div className="app"></div>
+        <div className={`app`}></div>
         </>
     )
 }

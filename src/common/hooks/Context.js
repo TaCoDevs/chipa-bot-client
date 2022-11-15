@@ -32,4 +32,16 @@ export function useAppContext() {
     return context
 }
 
-export default useAppContext
+export function Context() {
+    const { state } = useAppContext()
+    const { isBlackTheme, lang } = state
+
+    let theme = "white"
+    if (isBlackTheme) theme = "black"
+
+    const stateLang = require(`../../../public/assets/lang/${lang}.json`)
+
+    return { theme, stateLang, isBlackTheme }
+}
+
+export default Context

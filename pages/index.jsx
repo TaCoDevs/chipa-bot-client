@@ -1,19 +1,16 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
 
-import Button from "../src/common/containers/components/Button";
-
-import Logo from "../public/assets/images/chipa-bot.png";
-import styles from "../public/styles/pages/index.module.scss";
+import Context from "../src/common/hooks/Context"
 
 const App = () => {
+  const { theme } = Context()
   return (
     <>
       <Head>
         <title>Chipa-bot</title>
       </Head>
-      <div className="app">
+      <div className={`${theme} app`}>
         index
       </div>
     </>

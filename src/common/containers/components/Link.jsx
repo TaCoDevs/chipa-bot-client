@@ -4,17 +4,10 @@ import PropTypes from "prop-types"
 
 import styles from "../../../../public/styles/containers/components/Link.module.scss"
 
-const fakeContext = {
-    theme: "white",
-    lang: "en"
-}
-
 const ChipaLink = (props) => {
-  const { href, children } = props;
-  const { theme } = fakeContext
+  const { href, children, isDark } = props;
 
-  if (theme == "white") return <Link className={ `${styles.ChipaLink} ${styles.white}` } href={href}>{children}</Link>;
-  else return <Link className={ `${styles.ChipaLink} ${styles.dark}` } href={href}>{children}</Link>;
+  return isDark ? <Link className={ `text ${styles.ChipaLink} ${styles.black}` } href={href}>{children}</Link> : <Link className={ `text ${styles.ChipaLink}` } href={href}>{children}</Link>
 };
 
 ChipaLink.propTypes = {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
-import useAppContext from "../../src/common/hooks/Context";
+import { useAppContext } from "../../src/common/hooks/Context";
 
 const App = () => {
   const { state, setState } = useAppContext();
@@ -16,14 +16,17 @@ const App = () => {
     setState(config);
   }
 
-  useEffect(() => {
+  /**
+   *  este código se lagea al hacer spam, buscar el por qué
+   *   useEffect(() => {
     const theme = document.getElementById("theme")
     theme.addEventListener("click", () => {
       let isChecked = theme.checked
       
-      setState({ ...state, isBlackTheme: isChecked })
+      setState({ ...state, isBlackTheme: isChecked }, [state])
     })
   })
+   */
 
   return (
     <>
@@ -44,8 +47,8 @@ const App = () => {
         <div>
           <span>language</span>
           <select name="lang" id="lang">
-            <option value="en_us">En/Us</option>
-            <option value="es_mx">Es/Mx</option>
+            { lang == "en_us" ? <option selected value="en_us">En/Us</option> : <option value="en_us">En/Us</option>}
+            { lang == "es_mx" ? <option selected value="es_mx">Es/Mx</option> : <option value="es_mx">Es/Mx</option> }
           </select>
         </div>
         <div>

@@ -7,7 +7,7 @@ import ChipaLink from "./components/Link";
 
 import styles from "../../../public/styles/containers/Header.module.scss";
 import src from "../../../public/assets/images/chipa-bot.png";
-import { useAppContext } from "../hooks/Context";
+import { Context } from "../hooks/Context";
 
 function toggle() {
   const menu = document.getElementById("menu");
@@ -15,13 +15,8 @@ function toggle() {
 }
 
 const Header = () => {
-  const { state, setState } = useAppContext()
-  const { isBlackTheme, lang } = state
-
-  let theme = "white"
-  if (isBlackTheme) theme = "black"
-
-  const { header } = require(`../../../public/assets/lang/${lang}.json`)
+  const { stateLang, theme, isBlackTheme } = Context()
+  const { header } = stateLang
 
   return (
     <header className={`${theme} ${styles.header}`}>
@@ -33,12 +28,12 @@ const Header = () => {
           <div className={`title ${styles.logo_text}`}>Chipa-bot</div>
         </Link>
       </div>
-      <div className={`text ${styles.nav}`}>
-        <ChipaLink href="/commands">{ header.commands }</ChipaLink>
-        <ChipaLink href="/player">{ header.music }</ChipaLink>
-        <ChipaLink href="/console">{ header.console }</ChipaLink>
-        <ChipaLink href="/options">{ header.options }</ChipaLink>
-        <ChipaButton>
+      <div className={styles.nav}>
+        <ChipaLink isDark={isBlackTheme} href="/commands">{ header.commands }</ChipaLink>
+        <ChipaLink isDark={isBlackTheme} href="/player">{ header.music }</ChipaLink>
+        <ChipaLink isDark={isBlackTheme} href="/console">{ header.console }</ChipaLink>
+        <ChipaLink isDark={isBlackTheme} href="/options">{ header.options }</ChipaLink>
+        <ChipaButton isDark={isBlackTheme}>
           <Link href="http://26.89.117.213:4000/login">{ header.login }</Link>
         </ChipaButton>
       </div>

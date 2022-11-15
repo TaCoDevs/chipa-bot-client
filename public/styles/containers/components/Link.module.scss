@@ -11,8 +11,8 @@
         width: 0px;
         height: 1px;
         display: block;
-        background: $theme-color-alternative;
         transition: 300ms;
+        background-color: $white-theme-color-alternative;
     }
 
     &:hover::after {
@@ -20,10 +20,6 @@
     }
 }
 
-.white {
-    color: $white-theme-color-text;
-}
-
-.dark {
-    color: $black-theme-color-text;
+.black::after {
+    background-color: $black-theme-color-alternative;
 }
