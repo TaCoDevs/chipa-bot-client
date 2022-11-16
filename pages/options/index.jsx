@@ -46,9 +46,9 @@ const App = () => {
         </div>
         <div>
           <span>language</span>
-          <select name="lang" id="lang">
-            { lang == "en_us" ? <option selected value="en_us">En/Us</option> : <option value="en_us">En/Us</option>}
-            { lang == "es_mx" ? <option selected value="es_mx">Es/Mx</option> : <option value="es_mx">Es/Mx</option> }
+          <select name="lang" id="lang" defaultValue={lang}>
+            <option value="en_us">En/Us</option>
+            <option value="es_mx">Es/Mx</option>
           </select>
         </div>
         <div>

@@ -34,7 +34,7 @@ const Header = () => {
         <ChipaLink isDark={isBlackTheme} href="/console">{ header.console }</ChipaLink>
         <ChipaLink isDark={isBlackTheme} href="/options">{ header.options }</ChipaLink>
         <ChipaButton isDark={isBlackTheme}>
-          <Link href="http://26.89.117.213:4000/login">{ header.login }</Link>
+          <Link href="/login">{ header.login }</Link>
         </ChipaButton>
       </div>
       <div id="menu" className={styles.hamburger}>

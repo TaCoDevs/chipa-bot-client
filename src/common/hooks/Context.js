@@ -6,6 +6,7 @@ export const defaultConfig = { isBlackTheme: false, lang: "en_us" }
 
 export const AppContextProvider = ({ children }) => {
     const [state, setState] = React.useState(defaultConfig)
+    const [user, setUser] = React.useState(null)
 
     React.useEffect(() => {
         localStorage.setItem("defaultConfig", JSON.stringify(defaultConfig))
