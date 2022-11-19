@@ -1,1 +1,26 @@
 @import "../vars.module.scss";
+
+.slogan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    .logo {
+        width: 180px;
+        height: auto;
+        grid-column: 2 / 3;
+        justify-self: center;
+        transform: rotate(10deg);
+    }
+
+    .info {
+        grid-column: 2 / 3;
+        grid-row: 2 / 2;
+        justify-self: center;
+        text-align: center;
+    }
+}
+
+.add {
+    text-align: center;
+}
