@@ -7,7 +7,7 @@ import ChipaLink from "./components/Link";
 
 import styles from "../../../public/styles/containers/Header.module.scss";
 import src from "../../../public/assets/images/chipa-bot.png";
-import { Context } from "../hooks/Context";
+import { Context, useAppContext } from "../hooks/Context";
 
 function toggle() {
   const menu = document.getElementById("menu");
@@ -16,6 +16,8 @@ function toggle() {
 
 const Header = () => {
   const { stateLang, theme, isBlackTheme } = Context()
+  const { user } = useAppContext()
+  const { isLogin } = user
   const { header } = stateLang
 
   return (
@@ -34,8 +36,8 @@ const Header = () => {
         <ChipaLink isDark={isBlackTheme} href="/console">{ header.console }</ChipaLink>
         <ChipaLink isDark={isBlackTheme} href="/options">{ header.options }</ChipaLink>
         <ChipaButton isDark={isBlackTheme}>
-          <Link href="/login">{ header.login }</Link>
-        </ChipaButton>
+          <Link href={ isLogin ? "/logout" : "/login" } >{ isLogin ? header.logout : header.login }</Link>
+        </ChipaButton>)
       </div>
       <div id="menu" className={styles.hamburger}>
         <div className={styles.bars} onClick={toggle}>

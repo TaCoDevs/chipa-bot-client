@@ -11,7 +11,7 @@
     </p>
     <p>
 		<a href="https://vercel.com/?utm_source=discordjs&utm_campaign=oss">
-        <img src="https://raw.githubusercontent.com/discordjs/discord.js/main/.github/powered-by-vercel.svg" alt="Vercel" /></a>
+        <img src="https://raw.githubusercontent.com/discordjs/discord.js/main/.github/powered-by-vercel.svg" alt=".Vercel" /></a>
 	</p>
 </div>
 

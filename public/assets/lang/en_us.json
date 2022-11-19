@@ -4,11 +4,12 @@
         "music": "Music",
         "console": "Console",
         "options": "Options",
-        "login": "Login"
+        "login": "Login",
+        "logout": "Logout"
     },
     "landing": {
         "title": "Chipa-bot",
-        "slogan": "La grandeza a tus pies",
+        "slogan": "greatness at your feet",
         "news": {
             "music": {
                 "title": "Música",
@@ -24,8 +25,8 @@
             }
         },
         "add": {
-            "title": "Una nueva forma de moderar",
-            "text": "Iniciar sesión"
+            "title": "A new way to moderate",
+            "button": "Login"
         }
     },
     "commands": {

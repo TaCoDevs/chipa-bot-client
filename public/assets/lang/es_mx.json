@@ -4,7 +4,8 @@
         "music": "Música",
         "console": "Consola",
         "options": "Opciones",
-        "login": "Iniciar sesión"
+        "login": "Iniciar sesión",
+        "logout": "Cerrar sesión"
     },
     "landing": {
         "title": "Chipa-bot",

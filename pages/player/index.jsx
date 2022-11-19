@@ -3,10 +3,16 @@ import Head from "next/head";
 
 import Search from "./modules/Search";
 import styles from "./styles/index.module.scss";
-
-// const API = "http://26.89.117.213:4000/api/search/name";
+import { useAppContext } from "../../src/common/hooks/Context";
+import FourOhOne from "../401";
 
 const App = () => {
+  const { user, setUser } = useAppContext()
+  const { isLogin, el } = user
+
+  if (!isLogin) return <FourOhOne />
+
+  console.log(el)
   return (
     <div>
       <Head>
