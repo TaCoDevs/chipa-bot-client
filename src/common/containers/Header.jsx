@@ -41,9 +41,9 @@ const Header = () => {
       </div>
       <div id="menu" className={styles.hamburger}>
         <div className={styles.bars} onClick={toggle}>
-          <div className={`${styles.bar} ${styles.bar1}`}></div>
-          <div className={`${styles.bar} ${styles.bar2}`}></div>
-          <div className={`${styles.bar} ${styles.bar3}`}></div>
+          <div className={`bar ${styles.bar1}`}></div>
+          <div className={`bar ${styles.bar2}`}></div>
+          <div className={`bar ${styles.bar3}`}></div>
         </div>
         <ul className={styles.mobile_menu}>
           <div>logo</div>

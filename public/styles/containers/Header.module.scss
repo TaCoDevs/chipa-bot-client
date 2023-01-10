@@ -14,7 +14,10 @@
     align-items: center;
     text-decoration: none;
 
-    img { width: 80px; height: 80px; }
+    img {
+      width: 80px;
+      height: 80px;
+    }
   }
 }
 
@@ -27,14 +30,6 @@
   margin: auto 0;
   display: block;
   cursor: pointer;
-
-  .bar {
-    width: 35px;
-    height: 3px;
-    background-color: $white-theme-button-color-main;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
 
   .mobile_menu {
     display: none;
@@ -60,11 +55,13 @@
     display: block;
     position: absolute;
     top: 10%;
+    right: 0;
     width: 200px;
     background-color: aqua;
 
     a {
       display: block;
+      color: black;
     }
   }
 }

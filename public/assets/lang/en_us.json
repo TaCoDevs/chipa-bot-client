@@ -12,16 +12,16 @@
         "slogan": "greatness at your feet",
         "news": {
             "music": {
-                "title": "Música",
+                "title": "Music",
                 "text": "Un reproductor de música y un motor de búsqueda de YouTube, Spotify y SoundCloud"
             },
-            "news": {
-                "title": "",
-                "text": ""
+            "moderation": {
+                "title": "Moderación",
+                "text": "Comandos para moderar el servidor fácilmente"
             },
-            "add": {
-                "title": "",
-                "text": ""
+            "ui": {
+                "title": "Interfaz",
+                "text": "Interfaz fácil de usar para interaccionar con el bot"
             }
         },
         "add": {

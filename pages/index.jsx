@@ -19,6 +19,26 @@ const Slogan = ({ lang }) => (
   </section>
 );
 
+const News = ({ lang }) => {
+  const { news } = lang;
+  return (
+    <section className={styles.news}>
+      <div className={styles.music}>
+        <h1 className="title">{news.music.title}</h1>
+        <p className="text"> {news.music.text} </p>
+      </div>
+      <div className={styles.moderation}>
+        <h1 className="title">{news.moderation.title}</h1>
+        <p className="text"> {news.moderation.text} </p>
+      </div>
+      <div className={styles.ui}>
+        <h1 className="title">{news.ui.title}</h1>
+        <p className="text"> {news.ui.text} </p>
+      </div>
+    </section>
+  );
+};
+
 const Add = ({ lang }) => (
   <section className={styles.add}>
     <h3 className="title">{lang.add.title}</h3>
@@ -38,6 +58,7 @@ const App = () => {
       </Head>
       <div className={`${theme} app`}>
         <Slogan lang={landing} />
+        <News lang={landing} />
         <Add lang={landing} />
       </div>
     </>
